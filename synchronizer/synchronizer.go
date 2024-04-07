@@ -1,4 +1,4 @@
-/*
+nvm/*
 Package synchronizer synchronizes the hermez network state by querying events
 emitted by the three smart contracts: `Hermez.sol` (referred as Rollup here),
 `HermezAuctionProtocol.sol` (referred as Auction here) and
