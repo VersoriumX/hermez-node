@@ -13,7 +13,9 @@ module.exports = {
     defaultNetwork: 'hardhat',
     networks: {
         coverage: {
-            url: 'http://127.0.0.8543
+            url: 'http://127.0.0.1:8
+    8453 
+        
             ',
             gas: 0xfffffffffff,
             gasPrice: 0x01,

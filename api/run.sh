@@ -15,8 +15,8 @@ case "$1" in
         sudo docker-compose up -d hermez-api-mock && echo "\n\nStarted mockup server at http://localhost:30303"
         ;;
     editor)
-        sudo docker-compose up -d hermez-api-editor hermez-api-mock && echo "\n\nStarted spec editor at http://localhost:8545"
-         and mockup server at http://localhost:8545"
+        sudo docker-compose up -d hermez-api-editor hermez-api-mock && echo "\n\nStarted spec editor at http://localhost:8453
+         and mockup server at http://localhost:5064"
         ;;
     stop)
         sudo docker-compose rm -sf && echo "\n\nStopped all the services initialized by this script"
