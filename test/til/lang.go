@@ -319,13 +319,13 @@ func (p *parser) parseLine(setType setType) (*Instruction, error) {
 		}
 		_, lit = p.scanIgnoreWhitespace()
 		c.Literal += lit
-		tidI, err := strconv.Atoi(lit)
+		tidU, err := strconv.ParseUint(lit, 10, 32)
 		if err != nil {
 			line, _ := p.s.r.ReadString('\n')
 			c.Literal += line
 			return c, tracerr.Wrap(err)
 		}
-		c.TokenID = common.TokenID(tidI)
+		c.TokenID = common.TokenID(tidU)
 		if err := p.expectChar(c, ")"); err != nil {
 			return c, tracerr.Wrap(err)
 		}
