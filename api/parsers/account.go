@@ -2,6 +2,8 @@ package parsers
 
 import (
 	"strconv"
+	"math"
+	"fmt"
 	"strings"
 
 	"github.com/gin-gonic/gin"
@@ -59,11 +61,14 @@ func ParseAccountsFilters(c *gin.Context, v *validator.Validate) (historydb.GetA
 	if accountsFilter.IDs != "" {
 		ids := strings.Split(accountsFilter.IDs, ",")
 		for _, id := range ids {
-			idUint, err := strconv.Atoi(id)
+			idInt64, err := strconv.ParseInt(id, 10, 32)
 			if err != nil {
 				return historydb.GetAccountsAPIRequest{}, err
 			}
-			tokenID := common.TokenID(idUint)
+			if idInt64 < 0 || idInt64 > math.MaxUint32 {
+				return historydb.GetAccountsAPIRequest{}, fmt.Errorf("token ID out of range: %s", id)
+			}
+			tokenID := common.TokenID(idInt64)
 			tokenIDs = append(tokenIDs, tokenID)
 		}
 	}
