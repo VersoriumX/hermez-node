@@ -3,6 +3,7 @@ package parsers
 import (
 	"strconv"
 	"strings"
+	"math"
 
 	ethCommon "github.com/ethereum/go-ethereum/common"
 	"github.com/gin-gonic/gin"
@@ -46,9 +47,12 @@ func ParseTokensFilters(c *gin.Context) (historydb.GetTokensAPIRequest, error) {
 		ids := strings.Split(tokensFilters.IDs, "|")
 
 		for _, id := range ids {
-			idUint, err := strconv.Atoi(id)
+			idUint, err := strconv.ParseUint(id, 10, 32)
 			if err != nil {
 				return historydb.GetTokensAPIRequest{}, tracerr.Wrap(err)
+			}
+			if idUint > math.MaxUint32 {
+				return historydb.GetTokensAPIRequest{}, tracerr.New("ID value out of bounds for TokenID")
 			}
 			tokenID := common.TokenID(idUint)
 			tokensIDs = append(tokensIDs, tokenID)
