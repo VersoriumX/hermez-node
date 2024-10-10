@@ -5,7 +5,7 @@ go 1.14
 require (
 	github.com/arnaubennassar/eth2libp2p v0.0.0-20210729150027-477efe523548
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
-	github.com/btcsuite/btcd v0.24.0 // indirect
+	github.com/btcsuite/btcd v0.24.2 // indirect
 	github.com/dghubble/sling v1.3.0
 	github.com/dimiro1/health v0.0.0-20191019130555-c5cbb4d46ffc
 	github.com/ethereum/go-ethereum v1.13.15
@@ -46,7 +46,7 @@ require (
 	github.com/yourbasic/graph v0.0.0-20210606180040-8ecfec1c2869
 	go.uber.org/zap v1.24.0
 	golang.org/x/crypto v0.21.0
-	golang.org/x/net v0.22.0
+	golang.org/x/net v0.23.0
 	golang.org/x/sync v0.5.0
 	gopkg.in/go-playground/validator.v9 v9.29.1
 )
