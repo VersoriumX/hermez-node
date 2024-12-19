@@ -27,7 +27,7 @@ require (
 	github.com/libp2p/go-libp2p-connmgr v0.2.4
 	github.com/libp2p/go-libp2p-core v0.19.0
 	github.com/libp2p/go-libp2p-discovery v0.5.1
-	github.com/libp2p/go-libp2p-kad-dht v0.12.2
+	github.com/libp2p/go-libp2p-kad-dht v0.21.0
 	github.com/libp2p/go-libp2p-pubsub v0.5.0
 	github.com/libp2p/go-libp2p-yamux v0.5.4
 	github.com/libp2p/go-tcp-transport v0.2.4
@@ -45,8 +45,8 @@ require (
 	github.com/urfave/cli/v2 v2.25.7
 	github.com/yourbasic/graph v0.0.0-20210606180040-8ecfec1c2869
 	go.uber.org/zap v1.24.0
-	golang.org/x/crypto v0.21.0
-	golang.org/x/net v0.23.0
-	golang.org/x/sync v0.5.0
+	golang.org/x/crypto v0.31.0
+	golang.org/x/net v0.25.0
+	golang.org/x/sync v0.10.0
 	gopkg.in/go-playground/validator.v9 v9.29.1
 )
