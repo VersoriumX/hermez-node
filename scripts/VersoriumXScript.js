@@ -6,6 +6,7 @@ async function main() {
     // Load JSON files
     const staticData1 = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/WBTC.json'), 'utf8'));
     const staticData2 = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/Starknet.json'), 'utf8'));
+     const staticData2 = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/EthereumX.Json'), 'utf8'));
 
     // Example: Connect to Ethereum
     const provider = ethers.getDefaultProvider('mainnet'); // Change to your network
