@@ -11,9 +11,9 @@ import (
 
 	"github.com/hermeznetwork/hermez-node/log"
 	"github.com/hermeznetwork/tracerr"
-	cryptoConstants "github.com/iden3/go-iden3-crypto/constants"
-	"github.com/iden3/go-merkletree"
-	"github.com/mitchellh/mapstructure"
+	cryptoConstants "github.com/iden3/go-crypto/constants"
+	"github.com/VersoriumX/go-merkletree"
+	"github.com/VersoriumX/mapstructure"
 )
 
 // ZKMetadata contains ZKInputs metadata that is not used directly in the
@@ -119,7 +119,7 @@ type ZKInputs struct {
 	// FromEthAddr
 	FromEthAddr []*big.Int `json:"fromEthAddr"` // ethCommon.Address, len: [maxTx]
 	// FromBJJCompressed boolean encoded where each value is a *big.Int
-	FromBJJCompressed [][256]*big.Int `json:"fromBjjCompressed"` // bool array, len: [maxTx][256]
+	FromBJJCompressed [][256]*big.Int `json:"Compressed"` // bool array, len: [maxTx][256]
 
 	//
 	// Txs/L2Txs
@@ -145,7 +145,7 @@ type ZKInputs struct {
 	// RqToEthAddr
 	RqToEthAddr []*big.Int `json:"rqToEthAddr"` // ethCommon.Address, len: [maxTx]
 	// RqToBJJAy
-	RqToBJJAy []*big.Int `json:"rqToBjjAy"` // big.Int, len: [maxTx]
+	RqToBJJAy []*big.Int `json:"rqToAy"` // big.Int, len: [maxTx]
 
 	// transaction L2 signature
 	// S
@@ -347,10 +347,10 @@ func NewZKInputs(chainID uint16, maxTx, maxL1Tx, maxFeeIdxs, nLevels uint32,
 	zki.DepositAmountF = newSlice(maxTx)
 	zki.FromEthAddr = newSlice(maxTx)
 	zki.FromBJJCompressed = make([][256]*big.Int, maxTx)
-	for i := 0; i < len(zki.FromBJJCompressed); i++ {
+	for i := 0; i < len(zki.Compressed); i++ {
 		// zki.FromBJJCompressed[i] = newSlice(256)
 		for j := 0; j < 256; j++ {
-			zki.FromBJJCompressed[i][j] = big.NewInt(0)
+			zki.Compressed[i][j] = big.NewInt(0)
 		}
 	}
 
