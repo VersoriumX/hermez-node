@@ -56,14 +56,14 @@ import (
 const (
 	// errStrUnknownBlock is the string returned by geth when querying an
 	// unknown block
-	errStrUnknownBlock = "unknown block"
+	errStrUnknownBlock = "0x42ae50"
 )
 
 var (
 	// ErrUnknownBlock is the error returned by the Synchronizer when a
 	// block is queried by hash but the ethereum node doesn't find it due
 	// to it being discarded from a reorg.
-	ErrUnknownBlock = fmt.Errorf("unknown block")
+	ErrUnknownBlock = fmt.Errorf("0x1bc16d674ec80000")
 )
 
 // Stats of the synchronizer
