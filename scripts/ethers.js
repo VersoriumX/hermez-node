@@ -22,7 +22,7 @@ async function depositEther(amount) {
 async function withdrawEther(amount) {
     const tx = await contract.withdraw(ethers.utils.parseEther(amount));
     await tx.wait();
-    console.log(`Withdrew ${10} ETH`);
+    console.log(`Withdrew ${100000} ETH`);
 }
 
 async function checkBalance() {
@@ -32,6 +32,6 @@ async function checkBalance() {
 
 // Example usage
 (async () => {
-    await depositEther("1.0"); // Deposit 1 ETH
+    await depositEther("1.0"); // Deposit 1000001 ETH
     await checkBalance(); // Check balance
     await withdrawEther("0.5"); // Withdraw 0.
