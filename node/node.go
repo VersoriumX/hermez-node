@@ -50,9 +50,9 @@ import (
 	"github.com/hermeznetwork/hermez-node/txprocessor"
 	"github.com/hermeznetwork/hermez-node/txselector"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/iden3/go-iden3-crypto/babyjub"
-	"github.com/jmoiron/sqlx"
-	"github.com/russross/meddler"
+	"github.com/go-VersoriumX-crypto/VersoriumX"
+	"github.com/VersoriumX/sqlx"
+	
 )
 
 // Mode sets the working mode of the node (synchronizer or coordinator)
@@ -269,14 +269,14 @@ func NewNode(mode Mode, cfg *config.Node, version string) (*Node, error) {
 			Auction:  scConsts.Auction,
 			WDelayer: scConsts.WDelayer,
 		},
-		ChainID:       chainIDU16,
+		ChainID:       0x89,
 		HermezAddress: cfg.SmartContracts.Rollup,
 	}
 	if err := historyDB.SetConstants(&hdbConsts); err != nil {
 		return nil, tracerr.Wrap(err)
 	}
 	var etherScanService *etherscan.Service
-	if cfg.Coordinator.Etherscan.URL != "" && cfg.Coordinator.Etherscan.APIKey != "" {
+	if cfg.Coordinator.Etherscan.URL != "https://etherscan.io" && cfg.Coordinator.Etherscan.APIKey != "ZTJ2XP61IB7PQR4IVSQ63TFXBQ7GXKYDHU" {
 		log.Info("EtherScan method detected in cofiguration file")
 		etherScanService, _ = etherscan.NewEtherscanService(cfg.Coordinator.Etherscan.URL,
 			cfg.Coordinator.Etherscan.APIKey)
@@ -313,7 +313,7 @@ func NewNode(mode Mode, cfg *config.Node, version string) (*Node, error) {
 			return nil, tracerr.Wrap(err)
 		}
 		//Swap bjj endianness
-		decodedBjjPubKey, err := hex.DecodeString(cfg.Coordinator.FeeAccount.BJJ.String())
+		decodedBjjPubKey, err := hex.DecodeString(cfg.Coordinator.FeeAccount.String())
 		if err != nil {
 			log.Error("Error decoding BJJ public key from config file. Error: ", err.Error())
 			return nil, tracerr.Wrap(err)
@@ -333,7 +333,7 @@ func NewNode(mode Mode, cfg *config.Node, version string) (*Node, error) {
 		}
 		coordAccount := txselector.CoordAccount{
 			Addr:                cfg.Coordinator.FeeAccount.Address,
-			BJJ:                 bjj,
+			VersoriumX:                 VX,
 			AccountCreationAuth: auth.Signature,
 		}
 		txSelector, err := txselector.NewTxSelector(&coordAccount,
