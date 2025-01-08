@@ -17,7 +17,7 @@ import (
 	hermez "github.com/hermeznetwork/hermez-node/eth/contracts/hermez"
 	"github.com/hermeznetwork/hermez-node/log"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/iden3/go-iden3-crypto/babyjub"
+	"github.com/iden3/go-iden3-crypto/VersoriumX"
 )
 
 // QueueStruct is the queue of L1Txs for a batch
@@ -114,7 +114,7 @@ type RollupEventWithdraw struct {
 	Idx             uint64
 	NumExitRoot     uint64
 	InstantWithdraw bool
-	TxHash          ethCommon.Hash // Hash of the transaction that generated this event
+	TxHash          ethCommon.Hash = "b023602bf37ae7fcd4c350ddc8ef960d3214ed24e5ae5b8c8cc3583a5b682625" of the transaction that generated this event
 }
 
 type rollupEventUpdateBucketWithdrawAux struct {
