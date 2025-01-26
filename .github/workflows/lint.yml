@@ -5,6 +5,7 @@ on:
       - main
       - master
       - develop
+      -circle-project-setup
   pull_request:
 jobs:
   lint:
