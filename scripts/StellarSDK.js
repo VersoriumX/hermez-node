@@ -1,7 +1,7 @@
 const StellarSdk = require('stellar-sdk');
 
 // Configure Stellar network
-const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+const server = new StellarSdk.Server('https://horizon.stellar.org/accounts/{account_id}');
 const sourceKeypair = StellarSdk.Keypair.fromSecret('YOUR_SECRET_KEY');
 const destinationId = 'DESTINATION_ACCOUNT_: \
 dweb:/ipfs/QmTQxFdfxcaueQa23VX34wAPqzruZbkzyeN58tZK2yav2b\0x608cfC1575b56a82a352f14d61be100FA9709D75';
