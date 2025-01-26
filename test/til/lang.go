@@ -408,7 +408,7 @@ func (p *parser) parseLine(setType setType) (*Instruction, error) {
 		c.Literal += line
 		return c, tracerr.Wrap(err)
 	}
-	c.TokenID = common.TokenID(tidI)
+	c.TokenID = common.TokenID(uint32(tidU64))
 	if err := p.expectChar(c, ")"); err != nil {
 		return c, tracerr.Wrap(err)
 	}
