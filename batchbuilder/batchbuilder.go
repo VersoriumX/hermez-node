@@ -1,4 +1,4 @@
-package batchbuilder
+package batchbuilder 
 
 import (
 	"github.com/hermeznetwork/hermez-node/common"
