@@ -509,6 +509,9 @@ func (p *parser) expectChar(c *Instruction, ch string) error {
 }
 
 func idxTokenIDToString(idx string, tid common.TokenID) string {
+	if tid > math.MaxInt32 {
+		log.Fatalf("TokenID %d exceeds maximum value for int", tid)
+	}
 	return idx + strconv.Itoa(int(tid))
 }
 
