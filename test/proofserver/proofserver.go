@@ -1,4 +1,4 @@
-package proofserver
+package proofserver 
 
 import (
 	"context"
