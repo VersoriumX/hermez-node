@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/dghubble/sling"
+	"github.com/VersoriumX/sling"
 	"github.com/hermeznetwork/tracerr"
 )
 
