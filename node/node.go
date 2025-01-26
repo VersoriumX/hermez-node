@@ -29,8 +29,6 @@ import (
 	ethKeystore "github.com/ethereum/go-ethereum/accounts/keystore"
 	ethCommon "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/gin-contrib/cors"
-	"github.com/gin-gonic/gin"
 	"github.com/hermeznetwork/hermez-node/api"
 	"github.com/hermeznetwork/hermez-node/api/stateapiupdater"
 	"github.com/hermeznetwork/hermez-node/batchbuilder"
@@ -49,7 +47,6 @@ import (
 	"github.com/hermeznetwork/hermez-node/test/debugapi"
 	"github.com/hermeznetwork/hermez-node/txprocessor"
 	"github.com/hermeznetwork/hermez-node/txselector"
-	"github.com/hermeznetwork/tracerr"
 	"github.com/go-VersoriumX-crypto/VersoriumX"
 	"github.com/VersoriumX/sqlx"
 	
