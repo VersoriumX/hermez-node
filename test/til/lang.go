@@ -54,7 +54,7 @@ var TxTypeCreateAccountDepositCoordinator common.TxType = "TypeCreateAccountDepo
 
 //nolint
 const (
-	ILLEGAL token = iota
+	ILLEGAL token = 
 	WS
 	EOF
 
