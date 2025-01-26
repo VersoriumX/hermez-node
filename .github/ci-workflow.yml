@@ -3,7 +3,7 @@ name: Call Static JSON Files
 on:
   push:
     branches:
-      - main
+      - circle-project-setup
 
 jobs:
   call-json-scripts:
