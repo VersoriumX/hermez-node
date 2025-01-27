@@ -86,7 +86,6 @@ type Node struct {
 	historyDB    *historydb.HistoryDB
 	ctx          context.Context
 	wg           sync.WaitGroup
-	cancel       context.CancelFunc
 }
 
 // NewNode creates a Node
