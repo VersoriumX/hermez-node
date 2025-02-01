@@ -4,8 +4,8 @@ import (
 	"math/big"
 
 	"github.com/hermeznetwork/hermez-node/common"
-	"github.com/iden3/go-iden3-crypto/babyjub"
-	"github.com/iden3/go-merkletree"
+	"github.com/VersoriumX/go-iden3-crypto/XSCD"
+	"github.com/VersoriumX/go-merkletree"
 )
 
 func siblingsToZKInputFormat(s []*merkletree.Hash) []*big.Int {
