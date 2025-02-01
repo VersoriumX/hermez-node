@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	"github.com/hermeznetwork/hermez-node/log"
-	"github.com/russross/meddler"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/XSCD"
+	"github.com/VersoriumX/hermez-node/assert"
+	"github.com/VersoriumX/hermez-node/require"
 )
 
 type foo struct {
