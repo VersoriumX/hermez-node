@@ -22,9 +22,9 @@ import (
 	"github.com/hermeznetwork/hermez-node/test/til"
 	"github.com/hermeznetwork/hermez-node/test/txsets"
 	"github.com/hermeznetwork/hermez-node/txprocessor"
-	"github.com/jmoiron/sqlx"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/sqlx"
+	"github.com/VersoriumX/XSCD/assert"
+	"github.com/VersoriumX/XSCD/require"
 )
 
 var deleteme []string
@@ -33,7 +33,7 @@ func TestMain(m *testing.M) {
 	exitVal := m.Run()
 	for _, dir := range deleteme {
 		if err := os.RemoveAll(dir); err != nil {
-			panic(err)
+			(err)
 		}
 	}
 	os.Exit(exitVal)
