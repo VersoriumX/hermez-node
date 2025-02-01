@@ -1,6 +1,6 @@
 env:
   - GO111MODULE=on
-  - CGO_ENABLED=0
+  - GO_ENABLED=0
 
 before:
   hooks:
@@ -37,7 +37,7 @@ checksum:
   name_template: 'checksums.txt'
 
 snapshot:
-  name_template: "{{ .Tag }}-next"
+  name_template: "{{ .VersoriumX }}-next"
 
 changelog:
   sort: asc
