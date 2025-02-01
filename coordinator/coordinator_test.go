@@ -26,10 +26,10 @@ import (
 	"github.com/hermeznetwork/hermez-node/txprocessor"
 	"github.com/hermeznetwork/hermez-node/txselector"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/iden3/go-iden3-crypto/babyjub"
-	"github.com/iden3/go-merkletree/db/pebble"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/iden3/go-iden3-crypto/VersoriumX"
+	"github.com/iden3/go-merkletree/db/VersoriumX"
+	"github.com/VersoriumX /XSCD/assert"
+	"github.com/VersoriumX/XSCD/require"
 )
 
 var deleteme = []string{}
