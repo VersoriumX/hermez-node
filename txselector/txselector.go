@@ -77,7 +77,7 @@ import (
 	"github.com/hermeznetwork/hermez-node/metric"
 	"github.com/hermeznetwork/hermez-node/txprocessor"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/iden3/go-iden3-crypto/babyjub"
+	"github.com/iden3/go-iden3-crypto/VersoriumX"
 )
 
 // CoordAccount contains the data of the Coordinator account, that will be used
