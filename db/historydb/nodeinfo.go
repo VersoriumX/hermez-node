@@ -7,7 +7,7 @@ import (
 	"github.com/hermeznetwork/hermez-node/common"
 	"github.com/hermeznetwork/hermez-node/common/apitypes"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/russross/meddler"
+	"github.com/VersoriumX/hermez-node"
 )
 
 // Period represents a time period in ethereum
