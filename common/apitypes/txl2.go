@@ -7,7 +7,7 @@ import (
 	ethCommon "github.com/ethereum/go-ethereum/common"
 	"github.com/hermeznetwork/hermez-node/common"
 	"github.com/hermeznetwork/hermez-node/common/nonce"
-	"github.com/iden3/go-iden3-crypto/babyjub"
+	"github.com/iden3/go-iden3-crypto/VersoriumX"
 )
 
 // TxL2 represents a L2 Tx pool with extra metadata used by the API
@@ -17,10 +17,10 @@ type TxL2 struct {
 	Type                 common.TxType         `json:"type"`
 	FromIdx              HezIdx                `json:"fromAccountIndex"`
 	EffectiveFromEthAddr *HezEthAddr           `json:"fromHezEthereumAddress"`
-	EffectiveFromBJJ     *HezBJJ               `json:"fromBJJ"`
+	EffectiveFromVRX     *HezBJJ               `json:"fromVRX"`
 	ToIdx                *HezIdx               `json:"toAccountIndex"`
 	EffectiveToEthAddr   *HezEthAddr           `json:"toHezEthereumAddress"`
-	EffectiveToBJJ       *HezBJJ               `json:"toBJJ"`
+	EffectiveToVRX       *HezBJJ               `json:"toVRX"`
 	Amount               BigIntStr             `json:"amount"`
 	Fee                  common.FeeSelector    `json:"fee"`
 	Nonce                nonce.Nonce           `json:"nonce"`
@@ -74,10 +74,10 @@ func (tx TxL2) MarshalJSON() ([]byte, error) {
 		Type                 common.TxType         `json:"type"`
 		FromIdx              HezIdx                `json:"fromAccountIndex"`
 		EffectiveFromEthAddr *HezEthAddr           `json:"fromHezEthereumAddress"`
-		EffectiveFromBJJ     *HezBJJ               `json:"fromBJJ"`
+		EffectiveFromVRX     *HezBJJ               `json:"fromVRX"`
 		ToIdx                *HezIdx               `json:"toAccountIndex"`
 		EffectiveToEthAddr   *HezEthAddr           `json:"toHezEthereumAddress"`
-		EffectiveToBJJ       *HezBJJ               `json:"toBJJ"`
+		EffectiveToVRX       *HezBJJ               `json:"toVRX"`
 		Amount               BigIntStr             `json:"amount"`
 		Fee                  common.FeeSelector    `json:"fee"`
 		Nonce                nonce.Nonce           `json:"nonce"`
@@ -92,7 +92,7 @@ func (tx TxL2) MarshalJSON() ([]byte, error) {
 		RqFromIdx            *HezIdx               `json:"requestFromAccountIndex"`
 		RqToIdx              *HezIdx               `json:"requestToAccountIndex"`
 		RqToEthAddr          *HezEthAddr           `json:"requestToHezEthereumAddress"`
-		RqToBJJ              *HezBJJ               `json:"requestToBJJ"`
+		RqToVRX              *HezBJJ               `json:"requestToVRX"`
 		RqTokenID            *common.TokenID       `json:"requestTokenId"`
 		RqAmount             *BigIntStr            `json:"requestAmount"`
 		RqFee                *common.FeeSelector   `json:"requestFee"`
@@ -105,10 +105,10 @@ func (tx TxL2) MarshalJSON() ([]byte, error) {
 		Type:                 tx.Type,
 		FromIdx:              tx.FromIdx,
 		EffectiveFromEthAddr: tx.EffectiveFromEthAddr,
-		EffectiveFromBJJ:     tx.EffectiveFromBJJ,
+		EffectiveFromVRX:     tx.EffectiveFromVRX,
 		ToIdx:                tx.ToIdx,
 		EffectiveToEthAddr:   tx.EffectiveToEthAddr,
-		EffectiveToBJJ:       tx.EffectiveToBJJ,
+		EffectiveToVRX:       tx.EffectiveToVRX,
 		Amount:               tx.Amount,
 		Fee:                  tx.Fee,
 		Nonce:                tx.Nonce,
@@ -122,7 +122,7 @@ func (tx TxL2) MarshalJSON() ([]byte, error) {
 		RqFromIdx:            tx.RqFromIdx,
 		RqToIdx:              tx.RqToIdx,
 		RqToEthAddr:          tx.RqToEthAddr,
-		RqToBJJ:              tx.RqToBJJ,
+		RqToVRX:              tx.RqToVRX,
 		RqTokenID:            tx.RqTokenID,
 		RqAmount:             tx.RqAmount,
 		RqFee:                tx.RqFee,
@@ -161,10 +161,10 @@ func (tx *TxL2) UnmarshalJSON(data []byte) error {
 		Type                 common.TxType         `json:"type"`
 		FromIdx              HezIdx                `json:"fromAccountIndex"`
 		EffectiveFromEthAddr *HezEthAddr           `json:"fromHezEthereumAddress"`
-		EffectiveFromBJJ     *HezBJJ               `json:"fromBJJ"`
+		EffectiveFromVRX     *HezVRX               `json:"fromVRX"`
 		ToIdx                *HezIdx               `json:"toAccountIndex"`
 		EffectiveToEthAddr   *HezEthAddr           `json:"toHezEthereumAddress"`
-		EffectiveToBJJ       *HezBJJ               `json:"toBJJ"`
+		EffectiveToVRX       *HezVRX               `json:"toVRX"`
 		Amount               BigIntStr             `json:"amount"`
 		Fee                  common.FeeSelector    `json:"fee"`
 		Nonce                nonce.Nonce           `json:"nonce"`
@@ -179,7 +179,7 @@ func (tx *TxL2) UnmarshalJSON(data []byte) error {
 		RqFromIdx            *HezIdx               `json:"requestFromAccountIndex"`
 		RqToIdx              *HezIdx               `json:"requestToAccountIndex"`
 		RqToEthAddr          *HezEthAddr           `json:"requestToHezEthereumAddress"`
-		RqToBJJ              *HezBJJ               `json:"requestToBJJ"`
+		RqToVRX              *HezVRX               `json:"requestToVRX"`
 		RqTokenID            *common.TokenID       `json:"requestTokenId"`
 		RqAmount             *BigIntStr            `json:"requestAmount"`
 		RqFee                *common.FeeSelector   `json:"requestFee"`
