@@ -5,7 +5,7 @@
 At the core, the development model is greatly inspired by existing models out there. 
 The central repo holds two main branches with an infinite lifetime:
 
-* master (which will be renamed as `main`)
+* master (which will be renamed as `main`) 
 * develop
 
 We consider origin/develop to be the main branch where the source code of HEAD always 
