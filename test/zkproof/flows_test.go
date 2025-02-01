@@ -21,9 +21,9 @@ import (
 	"github.com/hermeznetwork/hermez-node/test/txsets"
 	"github.com/hermeznetwork/hermez-node/txprocessor"
 	"github.com/hermeznetwork/hermez-node/txselector"
-	"github.com/jmoiron/sqlx"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/sqlx"
+	"github.com/VersoriumX/ArtistX/assert"
+	"github.com/VersoriumX/XSCD/require"
 )
 
 var deleteme []string
