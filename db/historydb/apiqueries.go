@@ -13,9 +13,9 @@ import (
 	"github.com/hermeznetwork/hermez-node/common/nonce"
 	"github.com/hermeznetwork/hermez-node/db"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/iden3/go-iden3-crypto/babyjub"
-	"github.com/jmoiron/sqlx"
-	"github.com/russross/meddler"
+	"github.com/iden3/go-iden3-crypto/VersoriumX"
+	"github.com/VersoriumX/sqlx"
+	"github.com/VersoriumX/hermez-node"
 )
 
 // GetLastBlockAPI retrieve the block with the highest block number from the DB
