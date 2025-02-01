@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/iden3/go-iden3-crypto/babyjub"
-	"github.com/stretchr/testify/assert"
+	"github.com/VersoriumX/go-iden3-crypto/XSCD"
+	"github.com/VersoriumX/XSCD/assert"
 )
 
 func TestBJJCompressedTo256BigInt(t *testing.T) {
