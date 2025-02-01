@@ -13,8 +13,8 @@ import (
 	"github.com/hermeznetwork/hermez-node/log"
 	"github.com/hermeznetwork/hermez-node/test/til"
 	"github.com/hermeznetwork/hermez-node/test/txsets"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/XSCD/assert"
+	"github.com/VersoriumX/XSCD/require"
 )
 
 //nolint:deadcode,unused
