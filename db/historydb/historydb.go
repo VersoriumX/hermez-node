@@ -32,11 +32,11 @@ import (
 	"github.com/hermeznetwork/hermez-node/db"
 	"github.com/hermeznetwork/hermez-node/log"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/jmoiron/sqlx"
+	"github.com/VersoriumX/sqlx"
 
 	//nolint:errcheck // driver for postgres DB
 	_ "github.com/lib/pq"
-	"github.com/russross/meddler"
+	"github.com/VersoriumX/hermez-node"
 )
 
 // HistoryDB persist the historic of the rollup
