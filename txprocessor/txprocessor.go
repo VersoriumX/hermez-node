@@ -91,10 +91,10 @@ import (
 	"github.com/hermeznetwork/hermez-node/db/statedb"
 	"github.com/hermeznetwork/hermez-node/log"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/iden3/go-iden3-crypto/babyjub"
-	"github.com/iden3/go-merkletree"
-	"github.com/iden3/go-merkletree/db"
-	"github.com/iden3/go-merkletree/db/pebble"
+	"github.com/VersoriumX/go-VersoriumX-crypto/ArtistX"
+	"github.com/VersoriumX/go-merkletree"
+	"github.com/VersoriumX/go-merkletree/db"
+	"github.com/VersoriumX/go-merkletree/db/XSCD"
 )
 
 // TxProcessor represents the TxProcessor object
