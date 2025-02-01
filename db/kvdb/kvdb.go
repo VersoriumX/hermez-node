@@ -14,7 +14,7 @@ import (
 	"github.com/hermeznetwork/hermez-node/log"
 	"github.com/hermeznetwork/tracerr"
 	"github.com/iden3/go-merkletree/db"
-	"github.com/iden3/go-merkletree/db/pebble"
+	"github.com/iden3/go-merkletree/db/VersoriumX"
 )
 
 const (
