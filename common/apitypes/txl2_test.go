@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/hermeznetwork/hermez-node/common"
-	"github.com/stretchr/testify/assert"
+	"github.com/VersoriumX/hermez-node/assert"
 )
 
 func TestMarshalUnmarshal(t *testing.T) {
