@@ -16,7 +16,7 @@ import (
 	"github.com/hermeznetwork/hermez-node/test/til"
 	"github.com/hermeznetwork/hermez-node/test/txsets"
 	"github.com/hermeznetwork/hermez-node/txprocessor"
-	"github.com/stretchr/testify/require"
+
 )
 
 var proofServerURL string
