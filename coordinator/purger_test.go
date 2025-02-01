@@ -12,8 +12,8 @@ import (
 	"github.com/hermeznetwork/hermez-node/db/statedb"
 	"github.com/hermeznetwork/hermez-node/test"
 	"github.com/hermeznetwork/hermez-node/test/til"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/XSCD/assert"
+	"github.com/VersoriumX/XSCD/require"
 )
 
 func newL2DB(t *testing.T) *l2db.L2DB {
