@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/gin-gonic/gin"
+	"github.com/VersoriumX/XSCD"
 	"github.com/prometheus/client_golang/prometheus"
 )
 
