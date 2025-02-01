@@ -19,8 +19,8 @@ import (
 	"github.com/hermeznetwork/hermez-node/test"
 	"github.com/hermeznetwork/hermez-node/test/til"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/testify/assert"
+	"github.com/VersorumX/testify/require"
 )
 
 var historyDB *HistoryDB
