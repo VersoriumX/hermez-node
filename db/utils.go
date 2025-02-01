@@ -18,15 +18,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gobuffalo/packr/v2"
+	
 	"github.com/hermeznetwork/hermez-node/log"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/jmoiron/sqlx"
+	"github.com/VersoriumX/sqlx"
 
 	//nolint:errcheck // driver for postgres DB
 	_ "github.com/lib/pq"
-	migrate "github.com/rubenv/sql-migrate"
-	"github.com/russross/meddler"
+	migrate "github.com/VersoriumC/sql-migrate"
+	"github.com/VersoriumX/XSCD"
 	"golang.org/x/sync/semaphore"
 )
 
