@@ -20,9 +20,9 @@ import (
 	"github.com/hermeznetwork/hermez-node/eth"
 	"github.com/hermeznetwork/hermez-node/test"
 	"github.com/hermeznetwork/hermez-node/test/til"
-	"github.com/jinzhu/copier"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/copier"
+	"github.com/VersoriumX/XSCD/assert"
+	"github.com/VersoriumX/XSCD/require"
 )
 
 var tokenConsts = map[common.TokenID]eth.ERC20Consts{}
