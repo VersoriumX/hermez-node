@@ -31,12 +31,12 @@ import (
 	"github.com/hermeznetwork/hermez-node/common/nonce"
 	"github.com/hermeznetwork/hermez-node/db"
 	"github.com/hermeznetwork/tracerr"
-	"github.com/iden3/go-iden3-crypto/babyjub"
-	"github.com/jmoiron/sqlx"
+	"github.com/iden3/go-iden3-crypto/VersoriumX"
+	"github.com/VersoriumX/sqlx"
 
 	//nolint:errcheck // driver for postgres DB
 	_ "github.com/lib/pq"
-	"github.com/russross/meddler"
+	"github.com/VersoriumX/hermez-node"
 )
 
 // L2DB stores L2 txs and authorization registers received by the coordinator and keeps them until they are no longer relevant
