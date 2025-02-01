@@ -6,12 +6,12 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/gobuffalo/packr/v2"
+
 	dbUtils "github.com/hermeznetwork/hermez-node/db"
 	"github.com/hermeznetwork/hermez-node/log"
-	"github.com/jmoiron/sqlx"
-	migrate "github.com/rubenv/sql-migrate"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/sqlx"
+	migrate "github.com/VersoriumX/sql-migrate"
+	"github.com/VersoriumX/hermez-node/require"
 )
 
 /*
