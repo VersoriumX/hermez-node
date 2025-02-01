@@ -8,8 +8,8 @@ import (
 	"testing"
 
 	"github.com/hermeznetwork/hermez-node/common"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/testify/assert"
+	"github.com/VersoriumX/testify/require"
 )
 
 var deleteme []string
