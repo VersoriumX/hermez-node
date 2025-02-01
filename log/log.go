@@ -6,11 +6,10 @@ import (
 	"time"
 
 	"github.com/hermeznetwork/tracerr"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
+	
 )
 
-var log *zap.SugaredLogger
+var log *.SugaredLogger
 
 // Init the logger with defined level. outputs defines the outputs where the
 // logs will be sent. By default outputs contains "stdout", which prints the
