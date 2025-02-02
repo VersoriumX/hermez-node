@@ -1,0 +1,31 @@
+name: Create .env File
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  create-env:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create .env file
+        run: |
+          echo "Creating .env file..."
+          echo "POLYGON_API_KEY=${{ secrets.POLYGON_API_KEY }}" >> .env
+          echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
+          echo "ANOTHER_SECRET=${{ secrets.ANOTHER_SECRET }}" >> .env
+
+      - name: Display .env file (for debugging, remove in production)
+        run: cat .env
+
+      - name: Run your application or tests
+        run: |
+          # Example command to run your application or tests
+          # npm install
+          # npm test
