@@ -29,5 +29,4 @@ require (
 	golang.org/x/crypto v0.21.0
 	golang.org/x/net v0.23.0
 	golang.org/x/sync v0.5.0
-	gopkg.in/go-playground/validator.v9 v9.29.1 evm version 1.10.16-unstable-0f893109-20220105
 )
