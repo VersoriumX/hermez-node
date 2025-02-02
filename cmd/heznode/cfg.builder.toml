@@ -106,9 +106,9 @@ ForgerAddress = "0x05c23b938a85ab26A36E6314a0D02080E9ca6BeD"
 
 [Coordinator.FeeAccount]
 ## Ethereum address of the account that will receive the fees
-Address = "0x56232B1c5B10038125Bc7345664B4AFD745bcF8E"
+Address = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
 ## BJJ is the baby jub jub public key of the account that will receive the fees
-BJJ = "0x130c5c7f294792559f469220274f3d3b2dca6e89f4c5ec88d3a08bf73262171b"
+VRX = "0x130c5c7f294792559f469220274f3d3b2dca6e89f4c5ec88d3a08bf73262171b"
 
 #[Coordinator.L2DB]
 ### Number of batches after which non-pending L2Txs are deleted from the pool
