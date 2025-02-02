@@ -2,9 +2,9 @@ name: Create .env File
 
 on:
   push:
-    branches: [main]
+    branches: [Hermez-NodeX]
   pull_request:
-    branches: [main]
+    branches: [Hermez-NodeX]
 
 jobs:
   create-env:
